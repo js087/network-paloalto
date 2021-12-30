@@ -19,7 +19,7 @@ firewall_routes = [
 firewall_routes_metric = 10
 firewall_routes_install = 'unicast' #'no-install'
 
-#To apply these commands via CLI, you need CLI access and will need to change the config-out to 'cli'
+#To apply these commands via CLI, you need CLI access and will need to change the config-output to 'set' instead of XML (default)
 #set cli config-output-format set
 #https://knowledgebase.paloaltonetworks.com/KCSArticleDetail?id=kA10g000000ClHoCAK
 
