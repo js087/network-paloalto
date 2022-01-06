@@ -2,6 +2,9 @@
 #modules
 import datetime
 
+#mark start timestamp
+begin_time = datetime.datetime.now()
+
 #traffic-selector counting
 ts_counter = 0
 pa_vpn = '<pa_vpn_name>'
@@ -37,4 +40,4 @@ set network tunnel ipsec {pa_vpn} auto-key proxy-id ts{ts_counter:03} remote {ro
         ts_counter += 1
 
 #timestamping
-print(f"***** Generated: {datetime.datetime.now()} ***** ")
+print(f"***** Generated: {datetime.datetime.now()} || Runtime: {datetime.datetime.now() - begin_time} ***** ")
