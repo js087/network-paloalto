@@ -1,0 +1,21 @@
+Commands ### Notes ### Devices ### 
+tail follow yes mp-log ikemgr.log ### follow IPSEC conversations? ###  ### 
+test routing fib-lookup ip x.x.x.x virtual-router <table> ###  test destination and source interface ###  ### 
+debug dataplane pool statistics ###  ###  ### 
+show vpn flow name <tunnel name> ### show counters of specific tunnel interface ###  ### 
+show counter global filter delta yes packet-filter yes ###  ###  ### 
+show counter global filter aspect tunnel ### values/rates/sev/cat/aspect ###  ### 
+show counter global | match mtu ### See packet counters for things exceeding MTU ###  ### 
+show counter global | match ipfrag ### See packet counters for things tying into fragmentation ###  ### 
+!Good PCAP info ### https://fwknowledge.wordpress.com/2013/03/07/palo-alto-packet-capture-cli/ ###  ### 
+"yah you can just change the IKE gateway peer IP
+'clear vpn ike-sa tunnel xxxxx' on the cli ### Clear IKE SA ###  ### "
+"debug dataplane packet-diag clear filter all
+debug dataplane packet-diag set filter match source 172.23.13.245 destination 172.23.13.246 
+debug dataplane packet-diag set filter match source 172.23.13.246 destination 172.23.13.245
+debug dataplane packet-diag set filter match source 207.38.47.124 destination 208.54.245.116 
+debug dataplane packet-diag set filter match source 208.54.245.116 destination 207.38.47.124
+ ### Build packet filters at the CLI level ###  ### "
+Fancy packet filtering via CLI and filters - see note ###  ###  ### 
+test routing bgp virtual-router <virt-router> restart peer ### Restart BGP peer on Palo Alto ###  ### 
+show running resouce-monitor <timeframe> ###  ###  ### 
