@@ -19,3 +19,11 @@ debug dataplane packet-diag set filter match source 208.54.245.116 destination 2
 Fancy packet filtering via CLI and filters - see note ###  ###  ### 
 test routing bgp virtual-router <virt-router> restart peer ### Restart BGP peer on Palo Alto ###  ### 
 show running resouce-monitor <timeframe> ###  ###  ### 
+
+#20250120 - Tracking down the high cpu utilization issues
+show system statistics session
+show running resource-monitor
+show counter global filter delta yes
+
+set system setting target-vsys
+show counter interface all
